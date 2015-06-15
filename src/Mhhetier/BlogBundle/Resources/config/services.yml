@@ -1,0 +1,4 @@
+services:
+#    mhhetier_blog.example:
+#        class: Mhhetier\BlogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

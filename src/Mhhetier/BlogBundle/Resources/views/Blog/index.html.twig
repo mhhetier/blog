@@ -1,0 +1,16 @@
+{% extends "MhhetierBlogBundle::layout.html.twig" %}
+{% block MhhetierBlog_body %}
+<h1>Articles</h1>
+<ul>
+    {% for article in articles %}
+        <li>
+           Titre : <a href="{{ path("mhhetier_blog_voir", {"id": article.id} )}}">{{ article.titre }}</a> <br />
+           Contenu : {{ article.contenu }} <br />
+           Date : {{ article.datecreation|date("d/m/Y H:i") }} <br />
+           publié : {% if article.publication == false %} NON {% else %} OUI {% endif %}
+           
+           <br /><br />
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

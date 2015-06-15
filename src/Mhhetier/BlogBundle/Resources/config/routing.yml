@@ -1,0 +1,24 @@
+mhhetier_blog_accueil:
+    path:     /{page}
+    defaults: { _controller: MhhetierBlogBundle:Blog:index, page: 1 } # page: 1, pour mettre un paramètre par défaut
+    requirements:
+        page: \d+ #expression régulière, que des chiffres
+
+mhhetier_blog_voir:
+    path:     /article/{id}
+    defaults: { _controller: MhhetierBlogBundle:Blog:voir } 
+    requirements:
+        id: \d+
+        
+mhhetier_blog_ajouter:
+    path:     /ajouter
+    defaults: { _controller: MhhetierBlogBundle:Blog:ajouter } 
+    
+mhhetier_blog_modifier:
+    path:     /modifier/{id}
+    defaults: { _controller: MhhetierBlogBundle:Blog:modifier } 
+    requirements:
+        id: \d+    
+
+        
+        

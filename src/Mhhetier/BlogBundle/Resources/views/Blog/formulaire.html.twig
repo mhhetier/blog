@@ -1,0 +1,11 @@
+{# src/Mhhetier/BlogBundle/Ressources/views/formulaire.html.twig #}
+{% block MhhetierBlog_formulaire %}
+
+<h3>Formulaire</h3>
+
+<form method="post" {{ form_enctype(form) }}>
+   {{ form_widget(form) }}  
+   <input type="submit" />
+</form>
+
+{% endblock %}

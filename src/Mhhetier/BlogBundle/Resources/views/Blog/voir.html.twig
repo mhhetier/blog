@@ -1,0 +1,24 @@
+{% extends "MhhetierBlogBundle::layout.html.twig" %}
+{% block MhhetierBlog_body %}
+    
+    {% if article1.id|default %}
+        {% for categorie in article1.categories %}
+            <h1>{{ categorie.nom }}</h1>   
+        {% endfor %}  
+   
+    
+        Article :
+        Id : {{ article1.id }} <br />
+        Titre : {{ article1.titre }} <br />
+        Contenu : {{ article1.contenu }} <br />
+        {% if article1.image.url|default %}
+            <img src="{{ asset("images/")}}{{ article1.image.url }}" alt="{{ article1.image.alt }}" /> <br />
+        {% endif %}
+
+
+         {% for commentaire in article1.commentaires %}
+
+           <br /> Commentaire : {{ commentaire.contenu }}<br />
+         {% endfor %}   
+    {% endif%}    
+{% endblock %}
